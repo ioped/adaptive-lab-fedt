@@ -2,9 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fweet Loader</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="author" href="humans.txt">
 </head>
 <body>
 
@@ -12,24 +14,64 @@
     <h1>Fweet Loader</h1>
   </header>
 
+  <section id="alerts" role="alerts">
+  </section>
+
   <section role="main">
-    <a role="load-data" class="btn" href="">Load More</a>
-    <div class="fweetlist">
-      <article id="42" class="fweet">
-        <header>
-          <div class="user-handle">cupcake_luvr</div>
-          <div class="sentiment">1.0</div>
-          <div class="created-at">2013-06-30T19:20:00Z</div>
-        </header>
-        <p class="message">Cupcake ipsum dolor sit amet lollipop muffin cake pudding.</p>
-      </article>
+    <div id="fweetlist" class="fweetlist">
+      <header>
+        <span>Some fweets...</span>
+        <a id="fweet_loader" class="btn">Load more</a>
+        <a id="fweet_sort_by_sentiment" class="btn">S</a>
+        <a id="fweet_sort_by_created_at" class="btn">C</a>
+      </header>
+      <div id="fweets" class="fweets">
+        <div class="loading">
+          Loading...
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
+    <a href="SpecRunner.html">Jasmine Tests</a>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Handlebars templates -->
+  <script id="alertTemplate" type="text/x-handlebars-template" >
+    {{#alerts}}
+      <article class="alert {{#if isNew }} new {{/if }}">
+        <span class="message"> {{ message }} </span>
+        <a class="close">&#215;</a>
+      </article>
+    {{/alerts}}
+  </script>
+
+  <script id="fweetTemplate" type="text/x-handlebars-template" >
+    {{#fweets}}
+      <article id="fweet-{{id}}" class="fweet">
+        <header {{#if isNew }} class="new" {{/if }} >
+          <span class="user-handle">  {{ userHandle }} </span>
+          <span class="separator-dot"> &middot; </span>
+          <span class="sentiment"> {{ sentiment }} </span>
+          <span class="created-at"> {{ timeAgo }} </span>
+        </header>
+        <p class="message {{#if isNew }} new {{/if}}"> {{ message }} </p>
+      </article>
+    {{/fweets}}
+  </script>
+
+  <!-- Vendor Dependencies -->
+  <script src="js/vendor/jquery-2.0.2.js"></script>
+  <script src="js/vendor/moment.js"></script>
+  <script src="js/vendor/handlebars.js"></script>
+
+  <!-- Application -->
+  <script src="js/app/helper.js"></script>
+  <script src="js/app/models/fweet.js"></script>
+  <script src="js/app/models/alert.js"></script>
+  <script src="js/app/fweetLoader.js"></script>
+  <script src="js/app/init.js"></script>
 
 </body>
 </html>
