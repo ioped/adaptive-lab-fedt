@@ -5,7 +5,7 @@ Instructions
 ------------
 ### Serving
 
-You can run this as a simple server. Run the following command in the root directory of the project.
+You can run this as a simple server or just as a file. Run the following command in the root directory of the project.
 
     python -m SimpleHTTPServer
 
