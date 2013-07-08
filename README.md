@@ -26,7 +26,5 @@ In the root directory of the project run the following command to continually up
 
 TODO
 ----
-+ Define structure of index.html (partially complete)
-+ Write JavaScript functionality
 + Write JavaScript tests
 + More...
