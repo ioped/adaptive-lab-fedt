@@ -92,6 +92,8 @@
 
       // And initializa it as type 'extant'.
       newAlert.init( 'extant' );
+      newAlert.render();
+      newAlert.remove();
     }
 
     // At the end, reset ignoredFweets.
@@ -120,6 +122,8 @@
 
       // And initialize it as the default type.
       newAlert.init();
+      newAlert.render();
+      newAlert.remove();
     }
   };
 }( window.fweetLoader = window.fweetLoader || {}, jQuery ));
