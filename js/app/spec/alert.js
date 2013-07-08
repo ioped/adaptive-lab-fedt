@@ -7,18 +7,18 @@ describe( 'Alerts', function() {
 
     it( 'should be in alerts array', function() {
       expect( fweetLoader.alerts ).toContain( mockAlert );
-    })
+    });
   });
 
   describe( 'when alert is removed', function() {
     it( 'should not be in alerts array', function() {
       mockAlert.remove();
       expect( fweetLoader.alerts ).not.toContain( mockAlert );
-    })
+    });
 
     it( 'alerts array should be empty', function() {
       mockAlert.remove();
       expect( fweetLoader.alerts ).toMatch( [] );
-    })
+    });
   });
 });
