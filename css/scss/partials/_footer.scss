@@ -1,0 +1,15 @@
+footer {
+  @extend .cf;
+  background: $color-main;
+  color: $color-logo;
+  margin: 1px 0 0 0;
+  padding: 0 0.5em;
+  text-align: right;
+  @include respond-to(beetle) {
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 998;
+  }
+}

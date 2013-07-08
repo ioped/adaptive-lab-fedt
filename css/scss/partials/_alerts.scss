@@ -1,0 +1,28 @@
+section[role="alerts"] {
+  display: inline;
+  @include transition(all, 0.3s, ease-in-out);
+  @include respond-to(beetle) {
+    display: inline-block;
+    width: 100%;
+    margin: 5.4em 0 0 0;
+  }
+}
+
+.alert {
+  background-color: lighten($color-main, 8);
+  color: $white;
+  padding: 0.1em 0.5em;
+  @include transition(background-color, 1.5s, linear);
+  .message {
+    margin: 0;
+    padding: 0;
+  }
+  .close {
+    float: right;
+    line-height: 1.3;
+  }
+}
+
+.alert.new {
+  background: lighten($color-new, 8);
+}

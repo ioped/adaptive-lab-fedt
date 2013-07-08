@@ -1,0 +1,31 @@
+a.btn,
+.btn {
+  @include rounded(4px);
+  display: inline-block;
+  margin-top: 1px;
+  padding: 0.2em 0.5em;
+  border: none;
+  background: $charcoalgrey;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  font-family: $sans-serif;
+  line-height: 1;
+  cursor: pointer;
+  margin-left: 0.2em;
+  &:hover,
+  &.current{
+    background: darken($charcoalgrey, 14);
+  }
+  &:focus {
+    outline: thin dotted;
+    color: $color-link-focus;
+  }
+  &:active {
+    background: darken($charcoalgrey, 28);
+    color: darken($white, 14);
+  }
+}

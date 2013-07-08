@@ -1,0 +1,37 @@
+// Spacing //
+$baselineheight   : 1.4;
+$basespacingunit  : 20px;
+$basepadding      : 1em;
+
+// Type //
+$serif          : "Minion Pro", Georgia, "Times New Roman", Times, serif;
+$sans-serif     : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-font   : "Avenir Next", $sans-serif;
+$monospace      : Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+
+// Colors //
+// Greyscale
+$black           : rgb(   0,   0,   0 );
+$darkgrey        : rgb(  30,  30,  30 );
+$charcoalgrey    : rgb(  87,  87,  87 );
+$midgrey         : rgb( 207, 207, 207 );
+$lightgrey       : rgb( 242, 242, 242 );
+$offwhite        : rgb( 246, 246, 246 );
+$white           : rgb( 255, 255, 255 );
+
+// Main palette
+$color-main         : rgb( 241,  95,  81 ); // header
+$color-new          : rgb(  36, 130, 189 );
+$color-background   : $lightgrey; // background
+$color-logo         : $offwhite; // logo
+
+$color-text         : $black; // text
+$color-text-inverse : $white; // inverse text
+$color-text-select  : $charcoalgrey; 
+
+// Link palette
+$color-link         : darken($white, 10);
+$color-link-hover   : lighten( $color-link, 10 );
+$color-link-visited : $color-link-hover;
+$color-link-focus   : $color-link-hover;
+$color-link-click   : darken( $color-link, 10 );

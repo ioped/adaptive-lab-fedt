@@ -1,0 +1,14 @@
+.fr { float: right; }
+.fl { float: left; }
+
+.cf{
+  zoom: 1;
+  &:before,
+  &:after {
+      display: table;
+      content: "";
+  }
+  &:after {
+      clear: both;
+  }
+}

@@ -1,0 +1,170 @@
+h1, h2, h3,
+h4, h5, h6,{
+  font-weight: normal;
+  margin: 0;
+  font-family: $heading-font;
+  text-rendering : optimizelegibility;
+}
+h1,{
+  font-size : 1.7em;
+  margin-bottom : 0.22em ;
+  line-height: 1.06;
+  padding-bottom: 0.4em;
+  @include respond-to(beetle) {
+    font-size : 2em;
+    text-align: left;
+  }
+}
+h2,{
+  clear: both;
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 1.2;
+  padding: 0 0 0.5em;
+  text-align: center;
+  @include respond-to(beetle) {
+    font-size : 3em;
+  }
+}
+h3,{
+  font-size : 1.4em;
+  margin-bottom : 0;
+  font-weight: bold;
+  @include respond-to(beetle) {
+    font-size : 2em;
+  }
+}
+h4,{
+  font-size : 1.1em;
+  margin-bottom : 0.2em ;
+}
+h5,{
+  font-size : 1em;
+  margin-bottom : $baselineheight + em ;
+}
+h6,{
+  font-size : 1em;
+  margin-bottom : $baselineheight + em ;
+  text-transform : uppercase;
+  letter-spacing : 1px;
+  font-weight : normal;
+}
+
+p,
+ol,
+ul,
+dl,
+address {
+  font-size : 1em;
+  margin: 0 0 1em ;
+  line-height: $baselineheight;
+}
+.lede,
+.lead{
+  font-size : 1em;
+  line-height: $baselineheight / 1.05;
+  @include respond-to(beetle) {
+    font-size : 1.2em;
+  }
+}
+small {
+  //relative to parent
+  font-size:0.75em;
+}
+.smallprint,
+.milli{
+    font-size : 0.9em;  }
+.micro{
+    font-size : 0.75em; }
+
+/* lists */
+ul,
+ol {
+  margin : 0 0 $baselineheight+em 1em;
+  padding : 0 0 0 1em;
+}
+li ul,
+li ol {
+  font-size : 0.95em;
+  margin: 0;
+}
+li li,
+ol ol {
+  font-size: 1em;
+}
+blockquote {
+  font-size : 2em;
+  margin: 0;
+  padding: 0 1em 0 0;
+  color: $midgrey;
+  font-style: normal;
+  font-family: $serif;
+}
+q { quotes : none; }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+cite { font-style: normal; }
+dl,
+dd {
+  margin-bottom: $baselineheight;
+}
+dt {
+  font-weight: bold;
+}
+.dl-horizontal {
+  dt {
+    float: left;
+    clear: left;
+    width: 20.25%;
+    text-align: right;
+  }
+  dd {
+    margin-left: 22.78%;
+  }
+}
+abbr[title] {
+  border-bottom: 1px dotted $black;
+  cursor: help;
+}
+b, strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+ins {
+  background-color: lighten($black, 75%);
+  color: $darkgrey;
+  text-decoration: none;
+}
+mark {
+  background-color: lighten($black, 75%);
+  color: $darkgrey;
+  font-weight: bold;
+  font-style: italic;
+}
+pre,
+code,
+kbd,
+samp {
+  font-size:  1em;
+  font-family: $monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+sub,
+sup {
+  font-size : 0.8 ;
+  position: relative;
+  vertical-align: $baselineheight;
+}
+sup { top: -.5em; }
+sub { bottom: -.25em; }

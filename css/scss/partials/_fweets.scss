@@ -1,0 +1,75 @@
+.fweetlist {
+  background: $white;
+  min-height: 20em;
+  @include respond-to(beetle) {
+    padding: 0.3em 0.5em 0.5em 0.5em;
+    margin: 0.3em auto 2em auto;
+    min-height: 0;
+    width: 75%;
+    min-width: 32em;
+    max-width: 45em;
+    z-index: 997;
+    @include rounded;
+  }
+  > header {
+    color: $color-main;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.2em 0.5em 0.1em 0.5em;
+    .btn {
+      float: right;
+    }
+    @include respond-to(beetle) {
+      margin: 0;
+      padding: 0.2em;
+    }
+  }
+}
+
+.loading {
+  width: 5em;
+  margin:2em auto;
+}
+
+.fweet {
+  margin-top: 1px;
+  @include respond-to(beetle) {
+    margin: 2px 0 0 0;
+  }
+  header {
+    background: lighten( $color-main, 20 );
+    padding: 0 0.5em;
+    .user-handle {
+      font-weight: bold;
+    }
+    .separator-dot {
+      font-weight: bold;
+      padding: 0 0.2em;
+    }
+    .created-at {
+      float: right;
+    }
+    @include respond-to( beetle ) {
+      margin: 0;
+      @include border-radius( 3px, 0, 0, 3px );
+    }
+    @include transition( all, 0.3s, linear );
+    @include transition( background-color, 1.5s, linear );
+  }
+  header.new {
+    background-color: lighten( $color-new, 20 );
+  }
+  p {
+    background: lighten( $color-main, 30 );
+    margin: 0;
+    padding: 0.5em 0.5em 0.5em;
+    @include transition( all, 0.3s, linear );
+    @include transition( background-color, 1.5s, linear );
+    @include respond-to( beetle ) {
+      @include border-radius( 0, 3px, 3px, 0 );
+    }
+  }
+  p.new {
+    background-color: lighten( $color-new, 30 );
+  }
+}

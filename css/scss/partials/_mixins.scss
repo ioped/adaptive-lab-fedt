@@ -1,0 +1,91 @@
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+@mixin box-sizing( $boxsize : border-box ) {
+  -webkit-box-sizing: $boxsize;
+  -moz-box-sizing: $boxsize;
+  box-sizing: $boxsize;
+}
+
+
+// BORDERS //
+@mixin rounded($radius: 3px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0) {
+  -webkit-border-top-right-radius: $topright;
+  -webkit-border-bottom-right-radius: $bottomright;
+  -webkit-border-bottom-left-radius: $bottomleft;
+  -webkit-border-top-left-radius: $topleft;
+  -moz-border-radius-topright: $topright;
+  -moz-border-radius-bottomright: $bottomright;
+  -moz-border-radius-bottomleft: $bottomleft;
+  -moz-border-radius-topleft: $topleft;
+  border-top-right-radius: $topright;
+  border-bottom-right-radius: $bottomright;
+  border-bottom-left-radius: $bottomleft;
+  border-top-left-radius: $topleft;
+}
+
+
+// Transitions //
+
+@mixin transition( $what : all, $length : 1s, $easing : ease-in-out) {
+  -webkit-transition: $what $length $easing;
+  -moz-transition: $what $length $easing;
+  -ms-transition: $what $length $easing;
+  -o-transition: $what $length $easing;
+  transition: $what $length $easing;
+}
+
+
+// Media Queries //
+
+$break0: 20em;      // flea 320px
+$break1: 30em;      // ant 480px
+$break2: 37.5em;    // beetle 600px
+$break3: 42.5em;    // mouse 680px
+$break4: 48em;      // snake 768px
+$break5: 53.125em;  // eagle 850px
+$break6: 62.5em;    // hippo 1000px
+$break7: 71.875em;  // whale 1150px
+$break8: 93.750em;  // planet 1500px
+
+@mixin respond-to($media) {
+  @if $media == flea {
+    @media only screen and ( min-width: $break0 ) { @content; }
+  }
+  @if $media == ant {
+    @media only screen and ( min-width: $break1 ) { @content; }
+  }
+  @if $media == beetle {
+    @media only screen and ( min-width: $break2 ) { @content; }
+  }
+  @if $media == mouse {
+    @media only screen and ( min-width: $break3 ) { @content; }
+  }
+  @else if $media == snake {
+    @media only screen and ( min-width: $break4 ) { @content; }
+  }
+  @else if $media == eagle {
+    @media only screen and ( min-width: $break5 ) { @content; }
+  }
+  @else if $media == hippo {
+    @media only screen and ( min-width: $break6 ) { @content; }
+  }
+  @else if $media == whale {
+    @media only screen and ( min-width: $break7 ) { @content; }
+  }
+  @else if $media == planet {
+    @media only screen and ( min-width: $break8 ) { @content; }
+  }
+}
