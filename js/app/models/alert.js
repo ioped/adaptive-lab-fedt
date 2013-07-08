@@ -14,8 +14,6 @@
     init: function( type ) {
       this.set( type );
       this.persist();
-      this.render();
-      this.remove();
     },
 
     // Used to set the alert properties.

@@ -14,7 +14,6 @@
     init: function( fweet ) {
       this.set( fweet );
       this.persist();
-      this.render();
     },
 
     // Used to set the fweet properties.

@@ -73,6 +73,9 @@
         // And initialize it with the current fweet.
         newFweet.init( fweet );
 
+        // Refresh the fweets on the page.
+        newFweet.render();
+
         // And then track it.
         presentFweetIds.push( fweet.id );
       } else {
@@ -106,6 +109,8 @@
 
       // And initialize it as type 'fail'.
       newAlert.init( 'fail' );
+      newAlert.render();
+      newAlert.remove();
 
     // If the error is anything else... // eg. status === 418
     } else {
