@@ -8,7 +8,9 @@ Work in progress...
 
 TODO
 ----
-+ Create index.html, style.css, and main.js files
-+ Define structure of index.html
++ Define structure of index.html (partially complete)
 + Add JavaScript dependencies
++ Add SCSS dependency
++ Style the page, using SCSS
++ Write JavaScript functionality
 + More...
