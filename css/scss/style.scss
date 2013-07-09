@@ -18,6 +18,7 @@
 html {
   font-size: 100%;
   background: $color-background;
+  @include transition( background-color, 1.5s, linear );
 }
 
 body {

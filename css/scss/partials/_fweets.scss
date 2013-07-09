@@ -34,8 +34,10 @@
 
 .fweet {
   margin-top: 1px;
+  @include transition( all, 0.3s, linear );
   @include respond-to(beetle) {
     margin: 2px 0 0 0;
+    @include border-radius( 3px );
   }
   header {
     background: lighten( $color-main, 20 );
@@ -52,10 +54,7 @@
     }
     @include respond-to( beetle ) {
       margin: 0;
-      @include border-radius( 3px, 0, 0, 3px );
     }
-    @include transition( all, 0.3s, linear );
-    @include transition( background-color, 1.5s, linear );
   }
   header.new {
     background-color: lighten( $color-new, 20 );
@@ -64,11 +63,6 @@
     background: lighten( $color-main, 30 );
     margin: 0;
     padding: 0.5em 0.5em 0.5em;
-    @include transition( all, 0.3s, linear );
-    @include transition( background-color, 1.5s, linear );
-    @include respond-to( beetle ) {
-      @include border-radius( 0, 3px, 3px, 0 );
-    }
   }
   p.new {
     background-color: lighten( $color-new, 30 );

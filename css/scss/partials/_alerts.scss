@@ -12,7 +12,6 @@ section[role="alerts"] {
   background-color: lighten($color-main, 8);
   color: $white;
   padding: 0.1em 0.5em;
-  @include transition(background-color, 1.5s, linear);
   .message {
     margin: 0;
     padding: 0;
